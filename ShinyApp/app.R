@@ -609,7 +609,7 @@ server <- function(input, output, session) {
       Broadband
     }
     else if(supplyvar() == "supply6") {
-      HomeOwnership <- ggplotly(ggplot(data = appal2, aes(x = observation, y = OwnHome, colour = nonmetro.f, names=NAME, text = str_c(NAME, ": ", observation))) + 
+      HomeOwnership <- ggplotly(ggplot(data = appal2, aes(x = observation, y = OwnHome, colour = nonmetro.f, names=NAME, text = str_c(NAME, ": ", OwnHome))) + 
                                   geom_point()  +  geom_hline(data = g, aes(yintercept=M_OwnHome, color= "black")) + 
                                   facet_wrap( nonmetro.f~.)  + theme_bw()+ 
                                   theme(axis.text.x = element_blank(), legend.position = "none", plot.title = element_text(color="black", size=10, face="bold.italic", hjust = 0.5),                                                                                                                                                                                                                                            axis.title.y = element_text(color="black", size=10, face="bold")) +
